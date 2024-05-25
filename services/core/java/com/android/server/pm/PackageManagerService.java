@@ -2392,7 +2392,7 @@ public class PackageManagerService implements PackageSender, TestUtilityService 
 
                 }
             }
-
+            mResetSignatures = RESET_ALL_PACKAGE_SIGNATURES_ON_BOOT;
             // If this is first boot after an OTA, then we need to clear code cache directories.
             // Note that we do *not* clear the application profiles. These remain valid
             // across OTAs and are used to drive profile verification (post OTA) and

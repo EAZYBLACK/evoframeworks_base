@@ -112,7 +112,6 @@ final class InitAppsHelper {
         } else {
             mScanFlags = scanFlags;
         }
-        mResetSignatures = RESET_ALL_PACKAGE_SIGNATURES_ON_BOOT;
         mSystemParseFlags = mPm.getDefParseFlags() | ParsingPackageUtils.PARSE_IS_SYSTEM_DIR;
         mSystemScanFlags = mScanFlags | SCAN_AS_SYSTEM;
         mExecutorService = ParallelPackageParser.makeExecutorService();
