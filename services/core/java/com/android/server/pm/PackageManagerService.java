@@ -366,6 +366,8 @@ public class PackageManagerService implements PackageSender, TestUtilityService 
 
     static final boolean HIDE_EPHEMERAL_APIS = false;
 
+    static final boolean RESET_ALL_PACKAGE_SIGNATURES_ON_BOOT = true; 
+
     static final String PRECOMPILE_LAYOUTS = "pm.precompile_layouts";
 
     private static final int RADIO_UID = Process.PHONE_UID;
@@ -704,6 +706,7 @@ public class PackageManagerService implements PackageSender, TestUtilityService 
     final ProtectedPackages mProtectedPackages;
 
     private boolean mFirstBoot;
+    boolean mResetSignatures;
 
     final boolean mIsEngBuild;
     private final boolean mIsUserDebugBuild;

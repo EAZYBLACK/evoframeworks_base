@@ -112,6 +112,7 @@ final class InitAppsHelper {
         } else {
             mScanFlags = scanFlags;
         }
+        mResetSignatures = RESET_ALL_PACKAGE_SIGNATURES_ON_BOOT;
         mSystemParseFlags = mPm.getDefParseFlags() | ParsingPackageUtils.PARSE_IS_SYSTEM_DIR;
         mSystemScanFlags = mScanFlags | SCAN_AS_SYSTEM;
         mExecutorService = ParallelPackageParser.makeExecutorService();
@@ -267,6 +268,7 @@ final class InitAppsHelper {
         fixSystemPackages(userIds);
         logNonSystemAppScanningTime(startTime);
         mExpectingBetter.clear();
+        mResetSignatures = false;
         mPm.mSettings.pruneRenamedPackagesLPw();
     }
 
