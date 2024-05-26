@@ -1343,7 +1343,7 @@ final class InstallPackageHelper {
                 // we'll check this again later when scanning, but we want to
                 // bail early here before tripping over redefined permissions.
                 final KeySetManagerService ksms = mPm.mSettings.getKeySetManagerService();
-                final SharedUserSetting signatureCheckSus = mPm.mSettings.getSharedUserSettingLPr(
+                final SharedUserSetting signatureCheckSus = mPm.mSettings.getSharedUserSettingLPr(signatureCheckPs);
 
                 Slog.d(TAG, "resetting signatures on package " + parsedPackage.getPackageName());
                 ps.signatures.mSigningDetails = parsedPackage.getSigningDetails();
