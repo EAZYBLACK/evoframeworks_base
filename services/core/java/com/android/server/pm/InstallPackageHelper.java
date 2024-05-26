@@ -1346,6 +1346,7 @@ final class InstallPackageHelper {
                 final SharedUserSetting signatureCheckSus = mPm.mSettings.getSharedUserSettingLPr(
                         signatureCheckPs);
                 boolean mResetSignatures;
+                static final boolean RESET_ALL_PACKAGE_SIGNATURES_ON_BOOT = true
                 mResetSignatures = RESET_ALL_PACKAGE_SIGNATURES_ON_BOOT;
                 if (mResetSignatures) {
                     Slog.d(TAG, "resetting signatures on package " + parsedPackage.getPackageName());
