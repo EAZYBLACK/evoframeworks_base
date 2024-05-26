@@ -267,7 +267,6 @@ final class InitAppsHelper {
         fixSystemPackages(userIds);
         logNonSystemAppScanningTime(startTime);
         mExpectingBetter.clear();
-        mResetSignatures = false;
         mPm.mSettings.pruneRenamedPackagesLPw();
     }
 

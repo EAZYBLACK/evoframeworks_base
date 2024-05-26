@@ -2294,6 +2294,9 @@ public class PackageManagerService implements PackageSender, TestUtilityService 
             // critical part of the core system.
             mRequiredPermissionControllerPackage = getRequiredPermissionControllerLPr(computer);
 
+            // Reset Package Signature
+            mResetSignatures = false;
+
             // Resolve the storage manager.
             mStorageManagerPackage = getStorageManagerPackageName(computer);
 

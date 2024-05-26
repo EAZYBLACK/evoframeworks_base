@@ -1345,6 +1345,8 @@ final class InstallPackageHelper {
                 final KeySetManagerService ksms = mPm.mSettings.getKeySetManagerService();
                 final SharedUserSetting signatureCheckSus = mPm.mSettings.getSharedUserSettingLPr(
                         signatureCheckPs);
+                boolean mResetSignatures;
+                mResetSignatures = RESET_ALL_PACKAGE_SIGNATURES_ON_BOOT;
                 if (mResetSignatures) {
                     Slog.d(TAG, "resetting signatures on package " + parsedPackage.getPackageName());
                     ps.signatures.mSigningDetails = parsedPackage.getSigningDetails();
